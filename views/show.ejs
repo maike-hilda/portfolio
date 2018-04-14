@@ -1,0 +1,18 @@
+<h1><%= project.title %></h1>
+
+<img src="<%= project.image %>">
+
+<p><%= project.languages %></p>
+
+<p>See project link <a href="<%= project.url %>">here</a>.</p>
+
+<p>See github link <a href="<%= project.github %>">here</a>.</p>
+
+<p><%- project.description %></p>
+
+
+<a href="/projects/<%= project._id %>/edit" class="btn">Edit</a>
+<form action="/projects/<%= project._id %>?_method=DELETE" method="POST">
+    <button class="btn" type="submit">Delete</button>
+</form>
+
